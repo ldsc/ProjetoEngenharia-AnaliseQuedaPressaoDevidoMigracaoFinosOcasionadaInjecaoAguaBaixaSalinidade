@@ -1,0 +1,4 @@
+﻿  CSimuladorParticulas.cpp
+C:\Users\nicholas\Documents\Sayori\vs\SimuladorParticulas\SimuladorParticulas\CSimuladorParticulas.cpp(47,30): warning C4018: '<': incompatibilidade de signed/unsigned
+C:\Users\nicholas\Documents\Sayori\vs\SimuladorParticulas\SimuladorParticulas\CSimuladorParticulas.cpp(159,20): warning C4018: '<': incompatibilidade de signed/unsigned
+  SimuladorParticulas.vcxproj -> C:\Users\nicholas\Documents\Sayori\vs\SimuladorParticulas\Debug\SimuladorParticulas.exe

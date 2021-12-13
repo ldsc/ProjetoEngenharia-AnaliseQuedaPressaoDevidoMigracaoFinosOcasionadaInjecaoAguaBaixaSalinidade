@@ -1,0 +1,14 @@
+# size tempo
+101
+# size malha
+10001
+# numero de pontos integral
+11
+# start x
+0
+# end x - comprimento do testemunho
+0.1
+# start t
+0
+# end t - tempo final
+100

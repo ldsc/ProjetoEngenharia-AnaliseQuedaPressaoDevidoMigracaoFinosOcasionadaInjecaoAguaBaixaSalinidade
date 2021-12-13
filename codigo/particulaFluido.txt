@@ -1,0 +1,12 @@
+	# double viscosidade
+1
+# double lambdaPonte
+10
+# double lambdaAdesao
+3
+# double parC
+10
+# double par_n
+8.5
+# velocidade
+0.000146187

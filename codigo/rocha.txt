@@ -1,0 +1,10 @@
+# permeabilidade
+0.58
+# porosidade
+0.2
+# sigma_a0
+0.04
+# sigma_am
+0.025
+# N
+1
