@@ -10,7 +10,7 @@ void CGrid::saveGrid(std::vector<double> malha, double time) {
 			//<< std::setw(12) << c_susp[i]
 			<< std::setw(12) << sigma_a[i]
 			<< std::setw(12) << sigma_s[i]
-			<< std::setw(15) << diff_sigma_a[i]
+			<< std::setw(15) << diff_sigma_a[i];
 			//<< std::setw(15) << concentracao[i] << "\n";
 	}
 	file.close();

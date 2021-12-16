@@ -23,7 +23,7 @@ CSimuladorParticulas::CSimuladorParticulas(std::string pathParticulaFluido, std:
 		std::cin >> end_t;
 	}
 	else {
-		std::cout << "Infome o nome do arquivo ("ex: S imulacao.txt") ";
+		std::cout <<"Infome o nome do arquivo: exemplo(Simulação.txt) ";
 		std::string pathSimulador;
 		std::cin >> pathSimulador;
 		readFile(pathSimulador);
