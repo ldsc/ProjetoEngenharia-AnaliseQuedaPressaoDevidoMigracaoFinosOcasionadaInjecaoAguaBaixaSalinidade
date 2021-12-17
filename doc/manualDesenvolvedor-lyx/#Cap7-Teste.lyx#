@@ -1,0 +1,888 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master ../../Programação Prática - Copia/lyx/DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Teste
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Teste"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Teste} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Todo projeto de engenharia passa por uma etapa de testes.
+ Neste capítulo apresentamos alguns testes do software desenvolvido.
+ Estes testes devem dar resposta aos diagramas de caso de uso inicialmente
+ apresentados (diagramas de caso de uso geral e específicos).
+\end_layout
+
+\begin_layout Standard
+Posteriormente, os resultados gerados serão comparados com os resultados
+ obtidos de experimento laboratorais a fim de validar a modelagem matemática
+ desenvolvida.
+ 
+\end_layout
+
+\begin_layout Section
+Teste 1: Entrada de dados, grid do tempo e cálculo do tb.
+ 
+\end_layout
+
+\begin_layout Standard
+Nessa etapa serão testadas as entradas de dados via arquivo .txt, a criação
+ do grid do tempo e do espaco e do cálculo do tempo em que incia a formação
+ de pontes(tb) .
+ O teste será executado utilizando valores da literatura.
+ Os resultados obtidos das equações da modelagem matemática serão comparados
+ com os resultados calculados manualmente.
+ 
+\end_layout
+
+\begin_layout Standard
+Posteriormente, a modelagem será validada a partir da conferência dos resultados
+ obtidos e dos gráficos gerados com os resultados obtidos e dos gráficos
+ gerados em laboratório.
+ 
+\end_layout
+
+\begin_layout Standard
+Nesse primeiro teste, os parâmetros devem ser mostrados no terminal (Figura
+ 7.2) e devem ser os mesmo que estão no arquivo ParticulaFluido.txt e Rocha.txt
+ (Figura 7.1) .
+ Foi testada a criação da malha do tempo e do espaço bem como o valor do
+ cálculo do tb comparando com os valores calculados manualmente.
+ Pode-se observar que os valores obtidos na Figura 7.2 concorda com os valores
+ dos parâmetros inseridos conforme Figura 7.1.
+ Além disso, a malha do tempo foi criada de forma correta e o tempo tb também,
+ conforme figura 7.3.
+ 
+\end_layout
+
+\begin_layout Standard
+A seguir apresente texto explicando a sequência do teste e imagens do programa
+ (captura de tela).
+ 
+\end_layout
+
+\begin_layout Standard
+coloque aqui texto falando do diagrama de pacotes, referencie a figura.
+ Veja Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Teste-TelaPrograma-Captura1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/imagens/Parametros.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores dos parâmetros inseridos no arquivo .txt.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/imagens/terminal parametros .PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Terminal do programa mostrando os valores dos parâmetros, da malha do tempo
+ e do tempo que incia a formação de pontes(tb).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura1-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/imagens/excel.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabela criada no Excel para cálculo dos valores do tempo no inicio da formação
+ de pontes(tb).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura1-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teste 2: Gráficos
+\end_layout
+
+\begin_layout Standard
+Nessa etapa os gráficos serão testados e posteriormente serão validados
+ por meio da comparação com os gráficos obtidos a partir dos resultados
+ de laboratório.
+ 
+\end_layout
+
+\begin_layout Standard
+Nas figuras 7.4 e7.5 e nas figuras 7.8 e 7.9 são apresentados os parâmetros
+ que foram utilizados para gerar os gráficos para o primeiro teste e para
+ o segundo respectivamente.
+ É gerado o gráfico da queda de pressão adimensional pelo tempo(Figura 7.6
+ e Figura 7.10) e da concentração de partículas retidas por exclusão por
+ tamanho pelo espaço(x)(Figura7.7 e 7.11).
+ Vários testes foram realizados alterando apenas os parâmetros do tempo
+ e do espaço para análise.
+ Pode-se observar que houve um aumento da queda da pressão e um aumento
+ da concentração de partículas, conforme deveria ocorrer.
+ Desse modo, os gráficos foram gerados corretamente , no entanto é necessário
+ a validação com os valores obtidos em experimentos laboratóriais para validação
+ da modelagem.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste1/terminal.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando os parâmetros, a malha do tempo e o tb.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste1/parametros.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando os parâmrtros do tempo, do espaço, e o número
+ de pontos para integração.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste1/dpxt.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico gerado da queda de pressão pelo tempo.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste1/sxt.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico do Sigma_s pelo espaço.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste4/terminal.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando os parâmetros, a malha do tempo e o tb.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste4/terminal2.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do programa mostrando os parâmrtros do tempo, do espaço, e o número
+ de pontos para integração
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-5-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste4/dp x tempo.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico gerado da queda de pressão pelo tempo.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-5-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/teste4/sigma s x t.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico do Sigma_s pelo espaço.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-5-3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teste 3: Integração númerica
+\end_layout
+
+\begin_layout Standard
+O método de integração númerica pelo método de Simpson será testado utilizando
+ equações de integrais simples e conhecidas com solução analítica para conferênc
+ia e validação do método númerico para resolução da equação da integral
+ da modelagem matemática.
+ O programa será validado com base nos valores obtidos, onde devem ser iguais
+ aos valores obtidos manualmente.
+ 
+\end_layout
+
+\begin_layout Standard
+No Excel foi criada uma tabela(Figura 7.12) para cálculo da integral de 
+\begin_inset Formula $t*sin(t)$
+\end_inset
+
+ para conferência com os valores obtidos por meio do método de integração
+ númerica(método de Simpson).
+ No programa, foi alterada a equação para a equação 
+\begin_inset Formula $t*sin(t)$
+\end_inset
+
+ a fim de obter os valores e gráficos obtidos através dessa Integral.
+ Os parâmetros e a malha do tempo e do espaço utilizada apresenta-se na
+ Figura 7.13.
+ O resultado da integral calculado pelo excel e o resultado obtido pelo
+ programa(Figura 7.14) foram exatamente iguais, confirmando que o método
+ númerico está executando de forma correta a integração das equações.
+ A equação da concentração de partículas retidas por exclusão por tamanho
+ ou formação de pontes foi substituida pelo cálculo da Integral, e foi possível
+ perceber que o gráfico(Figura 7.15) gerado concorda com o gráfico da função.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/imagens/execel_integralPNG.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tabela gerada no Excel da resolução da Integral de t*sin(x).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/testedaIntegral-t sen(t)/Capturar.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela do terminal mostrando os parâmetros e o tempo.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-1-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/testedaIntegral-t sen(t)/integral_malha.PNG
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores das concetrações calculdas no tempo = 0,5s em vários pontos(x).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-1-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/User/Documents/ProjetoEngenharia/testedaIntegral-t sen(t)/grafico 2.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico mostrando o valor de Sigma_s pelo espaço(x)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Teste-TelaPrograma-Captura2-1-2-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

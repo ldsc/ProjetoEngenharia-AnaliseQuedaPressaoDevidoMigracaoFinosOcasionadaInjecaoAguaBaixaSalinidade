@@ -1,0 +1,2065 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nesta etapa do projeto será realizado o estudo de conceitos do sistema que
+ tenha relação com o sistema a ser desenvolvido, a análise de domínio e
+ a identificação de pacotes, tendo como intuito uma melhor compreensão do
+ software a ser desenvolvido.
+ Além disso, será efetuada uma análise dos requisitos, para ajustar os requisito
+s iniciais e assim desenvolver um sistema útil, para que, futuramente, seja
+ possível reutilizar e realizar a extensão do mesmo, como por exemplo incluir
+ o cálculo da queda de pressão, conhecida como impedância, para determinar
+ o declínio de injetividade e produtividade do poço.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Elaboração e análise de domínio
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Análise-de-domínio."
+
+\end_inset
+
+ (adaptado de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "prog-EngSof-Pressman"
+literal "true"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\end_layout
+
+\begin_layout Standard
+O objetivo desta etapa é a compreensão do domínio, da aréa que abrange o
+ software a ser desenvolvido, visto que o diagrama de pacotes representa
+ as áreas abordadas.
+ Além disso, visa determinar o que pode ser reaproveitado em outros sistemas.
+ 
+\end_layout
+
+\begin_layout Itemize
+O desenvolvimento do software, aborda a migração de finos em meios porosos,
+ um assunto presente em várias áreas e processos da engenharia, como a filtração
+ industrial de líquidos e gases, a cromatografia de exclusão por tamanho,
+ entre outros.
+ No caso da engenharia de petróleo, especificamente, ocorre a captura e
+ liberação de partículas pela rocha no meio poroso, ou seja, a migração
+ de finos no reservatório causando o declínio na permeabilidade.
+ A permeabilidade é uma propriedea da área petrolífera de suma importância,
+ visto que, afeta diretamente a produtividade/injetividade do poço.
+ 
+\end_layout
+
+\begin_layout Standard
+Disciplinas relacionadas ao desenvolvimento do sistema: 
+\end_layout
+
+\begin_layout Itemize
+Petrofísica: aborda as propriedades físicas de minerais e rochas, sendo
+ necessária para entender os conceitos de permeabilidade, composição da
+ matriz rochosa e do espaço poroso.
+ As propriedades da rocha reservatório.
+ 
+\end_layout
+
+\begin_layout Itemize
+Físico-química: para compreensão das reações que ocorrem do liquído com
+ componentes presentes no meio poroso.
+\end_layout
+
+\begin_layout Itemize
+Mecânica dos fluidos: estudo do comportamento dos fluidos.
+ Essa área aborda as propriedades do fluido, que é necessária para entender
+ o conceito de viscosidade e aborda algumas das forças que agem nas partículas
+ como as forças de arraste e de elevação.
+ Além da força gravitacional, no entanto o campo gravitacional é considerado
+ agente externo na mecânica dos fluidos.
+\end_layout
+
+\begin_layout Itemize
+Eletrostática: é a área da física que estuda as cargas elétricas em repouso,
+ necessária para entender como atua as forças eletróstaticas sobre as partículas
+, que são causadas pelas interações entre as mesmas (colóides).
+\end_layout
+
+\begin_layout Itemize
+Mecânica: área da física onde estuda os movimentos dos corpos, sendo necessária
+ para entender o conceito de velocidade.
+ 
+\end_layout
+
+\begin_layout Itemize
+Engenhária de reservatório: estudo da modelagem do comportamento dos fluidos
+ de reservatório, e dos mecanismos de produção.
+ Também estuda e propõe o método de recuperação secundária e/avançada de
+ petróleo, estuda o comportamento do fluido no interior da rocha reservatório
+ e visa estimar a reserva, entre outros.
+ Fundamental para o entendimento e desenvolvimento da modelagem matemática
+ e do sistema a ser desenvolvido.
+\end_layout
+
+\begin_layout Section
+Formulação teórica
+\end_layout
+
+\begin_layout Standard
+Para avaliar a migração de finos é necesário analisar a captura de finos,
+ descrita pela teoria fundamental de filtração profunda e a liberação de
+ finos, descrita pelo modelo fenomenológico de filtração profunda.
+ Esse processo é representado através da equação de balanço de massa, de
+ cinética de captura e de liberação de partículas de acordo com Herzig et
+ al.
+ (1970).
+ No presente estudo, as equações foram determinadas a partir do modelo modificad
+o desenvolvido por Siqueira (2010), Bedrikovetsky et al.
+ (2010) e Russel et al.
+ (2018) que serão apresentadas nas subseções.(ARRUMAR REF)
+\end_layout
+
+\begin_layout Standard
+O modelo fenomenológico de migração de finos devido a injeção de água de
+ baixa salinidade honrando a formação de pontes e a demora na liberação
+ de partículas é realizada através das equações do balanço de massa das
+ partículas , do balanço de massa dos íons, da cinética de captura, da cinética
+ de liberação de partículas e da lei de Darcy modificada , de acordo com
+ as premissas mencionadas na seção 3.2.1.
+ Por meio da modelagem foi obtida a equação para determinar a concentração
+ de partículas depositadas.
+ As propriedades do fluído e do meio poroso são obtidas por meio de experimentos
+ laboratoriais utilizando amostras/testemunhos, através da literatura ou
+ até mesmo por meio de dados, informações de casos de estudo e dados de
+ campo.
+ 
+\end_layout
+
+\begin_layout Subsection
+Premissas 
+\end_layout
+
+\begin_layout Itemize
+Escoamento monofásico de salmoura em meio poroso de geometria linear (testes
+ de laborátorio, testemunhos).
+\end_layout
+
+\begin_layout Itemize
+Fluídos e sólidos são considerados incompressíveis.
+\end_layout
+
+\begin_layout Itemize
+Não ocorre dispersão/difusão significativa de íons e sólidos.
+\end_layout
+
+\begin_layout Itemize
+Taxa de captura de partículas é influencida pela concentração de partículas
+ em suspensão, ocorre formação de pontes em alta concentração e captura
+ de partículas por adesão em baixa concentração.
+\end_layout
+
+\begin_layout Itemize
+Ocorre choque de salinidade instantâneo.
+\end_layout
+
+\begin_layout Itemize
+Físico-química do processo (aumento do pH, difusão de íons nas camadas de
+ argilominerais, etc.) encapsulada por cinética de liberação de partículas
+ similar a dessorção iônica.
+\end_layout
+
+\begin_layout Itemize
+Quantidade máxima de partículas presas por adesão depende do balanço de
+ forças na parede do poro (salinidade/pH, velocidade do fluxo).
+\end_layout
+
+\begin_layout Subsection
+Equações
+\end_layout
+
+\begin_layout Itemize
+Balanço de massa de partículas 
+\end_layout
+
+\begin_layout Standard
+A equação do balanço de massa descreve a variação de massa dentro do meio
+ poroso devido ao fluxo do fluido, representada pela diferença da massa
+ que entrou e a massa que saiu na direção do fluxo.
+ Essa equação é muito utilizada na área de engenharia de reservatório para
+ estudo do fluxo de líquido em meios porosos, para estudo do balanço de
+ materiais que na realidade é o balanço de massa dos fluidos no interior
+ dos poros da rocha-reservatório, entre outras áreas.
+ Essa equação determina o acúmulo de partículas durante o fluxo de um fluido
+ em um determinado periodo de tempo e espaço.
+ No presente estudo o meio poroso é considerado unidemensional, com área
+ de seção transversal variável A(x).
+ Além disso, é levado em consideração o fluxo linear em uma seção tranversal
+ 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+ e área A(x), durante um intervalo de tempo 
+\begin_inset Formula $\Delta t.$
+\end_inset
+
+ Assim, a equação do balanço de massa obtida para esse caso é apresentada
+ como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}(\phi c+\sigma_{a}+\sigma_{s})+\frac{\partial}{\partial x}(Uc)=0,
+\end{equation}
+
+\end_inset
+
+onde 
+\begin_inset Formula $\phi$
+\end_inset
+
+ é a porosidade do meio, 
+\begin_inset Formula $t\left[unid\right]$
+\end_inset
+
+ o tempo, 
+\begin_inset Formula $x$
+\end_inset
+
+ a posição, 
+\begin_inset Formula $\sigma_{a}$
+\end_inset
+
+ a concentração de partículas retidas nas paredes dos poros por adesão,
+ 
+\begin_inset Formula $\sigma_{s}$
+\end_inset
+
+a concentração de partículas retidas por exclusão por tamanho/pontes , 
+\begin_inset Formula $c$
+\end_inset
+
+ a concentração de partículas suspensas e 
+\begin_inset Formula $U$
+\end_inset
+
+ a velocidade de Darcy.
+\end_layout
+
+\begin_layout Standard
+IMAGEM
+\end_layout
+
+\begin_layout Itemize
+Balanço de massa de íons
+\end_layout
+
+\begin_layout Standard
+A equação do balanço de massa de íons foi introduzida, pois a injeção de
+ água de baixa salinidade acarreta a difusão de íons nas camadas de argilominera
+is.
+ O inchamento de argilominerais, ocorre devido a injeção de uma solução
+ salina em um meio onde não esta em equilíbrio com ele.
+ 
+\end_layout
+
+\begin_layout Standard
+Essa equação segue o mesmo conceito da equação do balanço de massa de partículas
+, no entanto é considerado a concentração molar 
+\begin_inset Formula $\chi$
+\end_inset
+
+ou massa por volume do íon.
+ Assim a equação do balanço obtida:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial(\phi\chi)}{\partial t}+\frac{\partial(U\chi)}{\partial x}=0,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $\chi\left[unid\right]$
+\end_inset
+
+ é a concentração molar ou massa por volume.
+\end_layout
+
+\begin_layout Itemize
+Cinética de captura de partículas
+\end_layout
+
+\begin_layout Standard
+A equação cinética de captura e liberação de partículas do modelo de Herzig
+ et al.
+ (1970) é empírica, e é representada como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{a}}{\partial t}=\lambda^{'}(\sigma)cU-k_{det}(U)\sigma_{a},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde a taxa de captura é proporcional ao fluxo advectivo de partículas suspenas
+ 
+\begin_inset Formula $\left(cU\right)$
+\end_inset
+
+, e o termo de liberação é proporcional a concentração de partículas retidas.
+ Nesse modelo 
+\begin_inset Formula $c$
+\end_inset
+
+ e 
+\begin_inset Formula $\sigma_{a}$
+\end_inset
+
+representa a concentração suspensa e a concentração retida, respectivamente.
+ A função de filtração é representada por 
+\begin_inset Formula $\lambda^{'}(\sigma),$
+\end_inset
+
+quando essa função é constante é conhecida como coeficiente de filtração,
+ isso ocorre quando a deposição é pequena.
+ O coeficiente de liberação de partículas é representado por 
+\begin_inset Formula $k_{det}(U)$
+\end_inset
+
+, e o módulo da velocidade de Darcy é representado por 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ O coeficiente de liberação é normalmente determinado experimentalmente,
+ sendo uma limitação do modelo.
+ O valor do coeficiente de liberação é considerado como zero na equação
+ (acima), para melhor exposição do modelo fenomenológico de filtração profunda.
+\end_layout
+
+\begin_layout Standard
+O modelo clássico de filtração profunda apresenta algumas limitações, uma
+ delas é o equilíbrio mecânico da partícula.
+ A cinética de liberação desta equação () não reflete a condição do equílibrio
+ mecânico das partículas.
+ A condição de equilíbrio é responsável pela permanência ou liberação da
+ partícula, de acordo com as forças que atuam na partícula que são as forças
+ eletrostáticas, força de arraste, força de elevação e força gravitacional.
+ Vários estudos foram realizados e foi desenvolvido o modelo de liberação
+ de partícula modificado, onde condiz com a condição do equílibrio mecânico.
+ No modelo proposto por Bedrikovetsky et al.
+ (2011a), substitui-se a cinética de liberação pela função de retenção máxima
+ (crítica).
+ Essa função determina que ocorrerá captura de partículas até o momento
+ em que a quantidade de partículas retida seja igual ou inferior a função
+ de rentenção maxíma.
+ A equação do modelo modificado é representada como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{s}}{\partial t}=\alpha\lambda c,
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{a}=\sigma_{cr}(\gamma,U).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No presente estudo, a equação cinética de captura de partículas é baseada
+ na equação do modelo clássico de filtração profunda MODIFICADA(CONFERIR),
+ porém considerando a concentração mínima para a formação de pontes 
+\begin_inset Formula $\left(c_{b}\right)$
+\end_inset
+
+.
+ Quando a concentração de partículas 
+\begin_inset Formula $\left(c\right)$
+\end_inset
+
+ é maior ou igual a concentração mínima para formação de pontes o coeficiente
+ de filtração é a soma do coeficiente de filtração por exclusão pelo tamanho
+ e por formação de pontes, pois considera-se que ocorre os dois fenômenos.
+ No entanto, quando 
+\begin_inset Formula $c<c_{b}$
+\end_inset
+
+ ocorre apenas captura de partícula por exclusão pelo tamanho.
+ A cinética de captura é representada pela equação abaixo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{s}}{\partial t}=\begin{cases}
+\begin{array}{cc}
+(\lambda_{b}+\lambda_{s}) & Uc\\
+\lambda_{s}Uc
+\end{array} & \begin{array}{cc}
+; & c\geqslant c_{b},\\
+; & c<c_{b},
+\end{array}\end{cases}
+\end{equation}
+
+\end_inset
+
+onde o 
+\begin_inset Formula $\lambda_{s}\left[unidade\right]$
+\end_inset
+
+ representa o coeficiente de filtração por exclusão pelo tamanho, 
+\begin_inset Formula $\lambda_{b}\left[unidade\right]$
+\end_inset
+
+ representa o coeficiente de filtração por formação de pontes e 
+\begin_inset Formula $c_{b}\left[v/v\right]$
+\end_inset
+
+ a concentração mínima para formação de pontes.
+ Uma análise dimensional da equação precedente será realizada para encontrar
+ dimensões de lambda.
+ Para efeito de análise dimensional, será considerarado vol.
+ Part./vol.
+ Rocha como equivalente à vol.
+ part./vol.
+ fluido.
+\end_layout
+
+\begin_layout Itemize
+Cinética de liberação de partículas
+\end_layout
+
+\begin_layout Standard
+Neste modelo matemático é considerada a influência da salinidade da água
+ injetada, ou seja a concentração molar de íons da solução, no caso a água
+ de baixa salinidade.
+ Devido ao fato de que a salinidade causa a liberação de partículas.
+ Como é conhecido a quantidade máxima de partículas presas por adesão depende
+ do balanço de forças na parede do poro, ou seja, depende da da velocidade
+ de fluxo, da salinidade/pH, temperatura entre outros fatores.
+ A equação da cinética de liberação é representada como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{a}}{\partial t}=-C\left|\sigma_{a}-\sigma_{a,M}(\chi,U)\right|^{n},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $C$
+\end_inset
+
+ e 
+\begin_inset Formula $n$
+\end_inset
+
+ são variáveis constantes do modelo, 
+\begin_inset Formula $\sigma_{a}$
+\end_inset
+
+ é a concentração de partículas retidas nas paredes dos poros por adesão,e
+ 
+\begin_inset Formula $\sigma_{a,M}$
+\end_inset
+
+ é a concentração de equilíbrio para as partículas aderidas na parede do
+ poro, em função de 
+\begin_inset Formula $\chi$
+\end_inset
+
+ e 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Lei de Darcy modificada
+\end_layout
+
+\begin_layout Standard
+A lei de Darcy, descreve o fluxo de um fluído em um meio poroso.
+ Esta lei relaciona a velocidade aparente do fluído com os gradientes de
+ pressão, uma variável importante para avaliar o declínio da permeabilidade,
+ que normalmente é expressa em termos de pressão.No entanto, no presente
+ estudo será utilizada a lei de Darcy modificada(BARENBLATT et al., 1990).
+ A equação do problema unidimensional na direção x é expressa como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U=-\frac{k_{0}k(\sigma)}{\mu}\frac{\partial p}{\partial x},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+é a permeabilidade inicial, 
+\begin_inset Formula $\triangle P$
+\end_inset
+
+ o gradiente de pressão, 
+\begin_inset Formula $\mu$
+\end_inset
+
+é a viscosidade do fluido e 
+\begin_inset Formula $k\left(\sigma\right)$
+\end_inset
+
+ representa a redução percentual da permeabilidade em função da deposição.
+\end_layout
+
+\begin_layout Standard
+A função 
+\begin_inset Formula $k\left(\sigma\right)$
+\end_inset
+
+ é adotada como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k(\sigma)=\frac{1}{1+\beta\sigma},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $\beta$
+\end_inset
+
+ é conhecido como o coeficiente de dano à formação, que é considerado constante.
+ Esse coeficiente, é uma constate empírica que depende das características
+ das partículas retidas e do meio poroso.
+\end_layout
+
+\begin_layout Standard
+Através da lei de Darcy modificada é possível calcular a queda de pressão
+ dimensional:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-\triangle p(t)=\frac{\mu UL}{k_{0}}+\frac{\mu UL}{k_{0}}\beta\int_{0}^{L}\sigma_{s}(x,t)dx.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Condições iniciais do problema
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,0)=\sigma_{s}(x,0)=0;
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{a}(x,0)=\sigma_{a0.};
+\end{equation}
+
+\end_inset
+
+onde 
+\begin_inset Formula $\sigma_{a0.}$
+\end_inset
+
+representa a concentração de partículas retidas nas paredes dos poros por
+ adesão inicial.
+ O cálculo da concentração é obtida através da equação (), tomando como
+ exemplo a caulinita como principal mineral presente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\%_{a}$
+\end_inset
+
+ Caulinita
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{a}=V(1-\phi)\%_{a}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma=\frac{V_{sólido}}{V}\Rightarrow\sigma_{a0}=\frac{V(1-\phi)\%_{a}}{V}=(1-\phi)\%_{a}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\chi(x,0)=\chi_{H};
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Condições de contorno
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(0,t)=0;
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\chi(0,t)=\chi_{L.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+nas condições de contorno, quando 
+\begin_inset Formula $x=0$
+\end_inset
+
+, a concentração em suspensão é nula, visto que, à montante do testemunho
+ a injeção de água é ausente de partículas.
+\end_layout
+
+\begin_layout Subsection
+Solução do sistema de equações
+\end_layout
+
+\begin_layout Standard
+Nesta seção será apresentada a solução do sistema de equações da subseção
+ 3.2.3.
+ O sistema de equações admite solução semi-analítica e parte do sistema
+ solução númerica.
+ Sabendo que a velocidade de Darcy U é determinada pela vazão de injeção
+ do teste, que é conhecida e constante é possivel observar que a equação
+ do balanço de massa dos íons está desacoplada do resto do sistema.
+ Por meio do método das características a equação do balanço de massa de
+ íons é escrita como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\chi}{d\eta}=\frac{\partial\chi}{\partial t}\frac{dt}{d\eta}+\frac{\partial\chi}{\partial x}\frac{dx}{d\eta}=\frac{\partial\chi}{\partial t}\phi+\frac{\partial\chi}{\partial x}U=0.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assim:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi=\frac{dt}{d\eta}\Rightarrow t-t_{0}=\phi\eta;
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U=\frac{dx}{d\eta}\Rightarrow x-x_{0}=U\eta.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As condições possibilitam o cálculo da salinidade da solução em qualquer
+ seção trasnveral e a qualquer momento, como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\chi(x,t) & =\begin{cases}
+\begin{array}{cc}
+\chi_{H} & ,\\
+\chi_{L} & ,
+\end{array} & \begin{array}{cc}
+ & x>\frac{Ut}{\phi},\\
+; & x<\frac{Ut}{\phi}.
+\end{array}\end{cases}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinada a salinidade, conforme equação (21), é possivel resolver a equação
+ da cinética de liberação de partícula(7), que pode ser reecrista como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{a}}{\partial t}=-C(\sigma_{a}(x,t)-\sigma_{a,M}(\chi(x,t),U))^{n}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para obter a concentração de partículas retidas nas paredes dos poros por
+ adesão (
+\begin_inset Formula $\sigma_{a}$
+\end_inset
+
+), é realizada a integração da equação precedente.
+ Primeiro, é percebido que as curvas características desta equação são todas
+ verticais.Segundo, essas curvas características são divididas em dois segmentos:
+ em um dos segmentos o t 
+\begin_inset Formula $\epsilon\left[0,\frac{\phi x}{U}\right)$
+\end_inset
+
+ e no outro semi-infinito t 
+\begin_inset Formula $\epsilon\left(\frac{\phi x}{U},\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Resolvendo a integração e considerando os limites de integração, é obtida
+ a equação para 
+\begin_inset Formula $\sigma_{a}$
+\end_inset
+
+ para 
+\begin_inset Formula $n=$
+\end_inset
+
+1 e quando 
+\begin_inset Formula $n\neq$
+\end_inset
+
+1, conforme abaixo:
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\sigma_{a}(x,t) & =\begin{cases}
+\begin{array}{cc}
+\sigma_{a0}, & t<\frac{x\phi}{U},\\
+\sigma_{a,M}+(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}, & t>\frac{x\phi}{U}.
+\end{array}\end{cases}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{a}}{\partial t}=\begin{cases}
+\begin{array}{cc}
+0, & t<\frac{x\phi}{U}\\
+-C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}, & t>\frac{x\phi}{U}.
+\end{array}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{a}(x,t)=\begin{cases}
+\begin{array}{cc}
+\sigma_{a0}, & t<\frac{x\phi}{U},\\
+\left[\sigma_{a,M}+(\sigma_{a0}-\sigma_{a,M}){}^{1-n}-C(1-n)(t-\frac{x\phi}{U})\right]^{\frac{n}{1-n}}, & t>\frac{x\phi}{U}.
+\end{array}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{a}}{\partial t}=\begin{cases}
+\begin{array}{cc}
+0, & t<\frac{x\phi}{U},\\
+-C\left[(\sigma_{a0}-\sigma_{a,M})^{1-n}-C(1-n)\left(t-\frac{x\phi}{U}\right)\right]^{\frac{n}{1-n}}, & t>\frac{x\phi}{U}.
+\end{array}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Através da equação do balanço de massa (1), da equação de cinética de captura
+ (6) e da equação (24) para 
+\begin_inset Formula $n=$
+\end_inset
+
+1 e da equação (26) para 
+\begin_inset Formula $n\neq$
+\end_inset
+
+1, é obtida a equação de concentração de partículas suspensas (c) para 
+\begin_inset Formula $n=$
+\end_inset
+
+1 e para 
+\begin_inset Formula $n\neq$
+\end_inset
+
+1.
+ Foi levado em consideração as condições para 
+\begin_inset Formula $t<\frac{\phi x}{U}$
+\end_inset
+
+ e para 
+\begin_inset Formula $t\geq\frac{\phi x}{U}$
+\end_inset
+
+, e em cada condição do tempo é levado em consideração a condição de 
+\begin_inset Formula $c<cb$
+\end_inset
+
+ e 
+\begin_inset Formula $c\geqslant cb$
+\end_inset
+
+, onde 
+\begin_inset Formula $cb$
+\end_inset
+
+ é a concentração mínima para formação de pontes.
+ As equações e condições estão representadas abaixo.
+ 
+\end_layout
+
+\begin_layout Standard
+Obtendo assim:
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n=1$
+\end_inset
+
+, temos dois casos onde
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $t<\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c<cb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=0.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\geq cb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=0\Rightarrow\sigma_{s}(x,t)=0.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $t\geq\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c<cb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=\frac{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}{U\lambda_{s}}(1-e^{-\lambda_{s}x})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\geq cb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=\frac{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}{U(\lambda_{b}+\lambda_{s})}\left[1-\frac{1-\frac{U(\lambda_{b}+\lambda_{s})c_{b}}{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}}{\left(1-\frac{U\lambda_{s}c_{b}}{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}\right)^{1+\frac{\lambda_{b}}{\lambda_{s}}}}e^{(\lambda_{b}+\lambda_{s})x}\right].
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n\neq1$
+\end_inset
+
+, temos dois casos onde
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $t<\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c<c_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=0.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\geq cb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=0=>\sigma_{s}(x,t)=0.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $t\geq\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c<c_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c(x,t)=\frac{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}(1-e^{-x\lambda_{s}})}{\lambda_{s}U},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $t_{0}=t-\frac{\phi x}{U}$
+\end_inset
+
+ e 
+\begin_inset Formula $\eta=\frac{x}{U}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\geq cb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+c(x,t) & =\frac{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}{U(\lambda_{s}+\lambda_{b})}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\left[1-\frac{[1-\frac{U(\lambda_{s}+\lambda_{b})c_{b}}{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}]e^{-x(\lambda_{b}+\lambda_{s})}}{\left(1-\frac{\lambda_{s}Uc_{b}}{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}\right)^{1+\frac{\lambda_{b}}{\lambda_{s}}}}\right] & ,
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde 
+\begin_inset Formula $t_{0}=t-\frac{\phi x}{U}$
+\end_inset
+
+ e 
+\begin_inset Formula $\eta=\frac{x}{U}.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Encontrada as equações da concentração de partículas suspensas(c) é possível
+ deteminar o momento em que inicia a formação de pontes(tb).
+ A zona de formação de pontes é quando a concentração de partículas suspensas
+ é igual a concentração mínima para formação de pontes.
+ Sendo assim, ao igualar a equação de 
+\begin_inset Formula $c(x,t)$
+\end_inset
+
+ a 
+\begin_inset Formula $cb$
+\end_inset
+
+ em cada caso é encontado o 
+\begin_inset Formula $tb$
+\end_inset
+
+.
+ Obtendo :
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+tb=\frac{x\phi}{U}+\frac{1}{C}ln(\frac{C(\sigma_{a0}-\sigma_{a,M})(1-e^{-\lambda_{s}x})}{c_{b}U\lambda_{s}}),
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+t_{b}=2\frac{\phi x}{U}+\frac{\left(\sigma_{a0}-\sigma_{a,M}\right)}{C(1-n)}^{1-n}-\frac{1}{C(1-n)}\left(\frac{\lambda_{s}Uc_{b}}{C\left(1-e^{-x\lambda_{s}}\right)}\right)^{\frac{1-n}{n}}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para encontrar a concentração de partículas retidas por exclusão por tamanho/pon
+tes, utiliza-se a equação de cinética de captura e 
+\begin_inset Formula $c(x,t)$
+\end_inset
+
+.
+ É levado em consideração tres casos, onde 
+\begin_inset Formula $t<\frac{\phi x}{U}$
+\end_inset
+
+, 
+\begin_inset Formula $t\geq\frac{\phi x}{U}$
+\end_inset
+
+ e 
+\begin_inset Formula $t<tb,$
+\end_inset
+
+e por fim o caso onde 
+\begin_inset Formula $t<\frac{\phi x}{U}$
+\end_inset
+
+ ou 
+\begin_inset Formula $t>tb$
+\end_inset
+
+ para 
+\begin_inset Formula $n=$
+\end_inset
+
+1 e para 
+\begin_inset Formula $n\neq$
+\end_inset
+
+1.
+ As equações obtidas foram:
+\end_layout
+
+\begin_layout Standard
+para 
+\begin_inset Formula $n=1$
+\end_inset
+
+, temos três casos:
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $t<\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{s}(x_{0},t)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $t\geq\frac{x\phi}{U}$
+\end_inset
+
+ e 
+\begin_inset Formula $t<t_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{s}}{\partial t}=(\lambda_{s}+\lambda_{b})U\frac{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}{U(\lambda_{s}+\lambda_{b})}\left[1-\frac{1-\frac{U(\lambda_{s}+\lambda_{b})}{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}}{\left(1-\frac{U\lambda_{s}c_{b}}{C(\sigma_{a0}-\sigma_{a,M})e^{-C(t-\frac{x\phi}{U})}}\right)}\right],
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{s}(x_{0},t)=C(\sigma_{a0}-\sigma_{a,M})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{align}
+*\left[\frac{1-e^{-C(t-\frac{\phi x_{0}}{U})}}{C}+e^{-\left(\lambda_{s}+\lambda_{b}-C\left(\frac{x\phi}{U}\right)x_{0}\right)}\int_{\frac{\phi x}{U}}^{t}\frac{\frac{U(\lambda_{s}+\lambda_{b})c_{b}}{C(\sigma_{a0}-\sigma_{a,M})e^{\frac{C\phi x_{0}}{U}}}-e^{-Ct}}{\left(1-\frac{U\lambda_{s}c_{b}}{C(\sigma_{a0}-\sigma_{a,M})e^{\frac{C\phi x_{0}}{U}}}\right)}dt\right] & ,
+\end{align}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+cuja integral só pode ser expressa em termos de funções elementares.
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $t\geq\frac{x\phi}{U}$
+\end_inset
+
+, 
+\begin_inset Formula $t>t_{b}$
+\end_inset
+
+ ou 
+\begin_inset Formula $t<\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\sigma_{s}}{\partial t}(x_{0},t)=C(\sigma_{a0}-\sigma_{a,M})(1-e^{\lambda_{s}x_{0}})e^{-C(t-\frac{x\phi}{U})},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{s}(x_{0},t)=\sigma_{s}\left(x_{0},max(t_{b}(x_{0}),\frac{\phi x_{0}}{U})\right)+
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{align}
++(\sigma_{a0}-\sigma_{a,M})(1-e^{-\lambda_{s}x_{0}})e^{(C\frac{\phi x_{0}}{U})}\left[e^{-Cmax(tb,\frac{\phi x}{U})}-e^{-ct}\right] & .
+\end{align}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $n\neq1,$
+\end_inset
+
+temos três casos, onde
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $t<\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\sigma_{s}(x_{0},t)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $t\geq\frac{x\phi}{U}$
+\end_inset
+
+ e 
+\begin_inset Formula $t<t_{b}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial\sigma_{s}(x_{0},t)}{\partial t} & =C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{alignat}{1}
+*\left[1-\frac{[1-\frac{U(\lambda_{s}+\lambda_{b})c_{b}}{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}]e^{x(\lambda_{b}+\lambda_{s})}}{\left(1-\frac{\lambda_{s}Uc_{b}}{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}\right)^{1+\frac{\lambda_{b}}{\lambda_{s}}}}\right] & ,
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{s}(x_{0},t)-\sigma_{s}(x_{0},\frac{\phi x}{U})=C\int_{\frac{\phi x}{U}}^{t}\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+*\left[1-\frac{[1-\frac{U(\lambda_{s}+\lambda_{b})c_{b}}{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}]e^{x(\lambda_{b}+\lambda_{s})}}{\left(1-\frac{\lambda_{s}Uc_{b}}{C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}}\right)^{1+\frac{\lambda_{b}}{\lambda_{s}}}}\right]dt & ,
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+cuja integral só pode ser expressa em termos de funções elementares.
+ 
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $t\geq\frac{x\phi}{U}$
+\end_inset
+
+, 
+\begin_inset Formula $t>t_{b}$
+\end_inset
+
+ ou 
+\begin_inset Formula $t<\frac{x\phi}{U}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial\sigma_{s}(x_{0},t)}{\partial t} & = & C\left[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})\right]^{^{\frac{n}{1-n}}}(1-e^{-x\lambda_{s}}),
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{s}(x_{0},t)-\sigma_{s}(x_{0},max(tb(x_{0}),\frac{\phi x_{0}}{U}))=(1-e^{-x\lambda_{s}})\frac{(n-1)}{(1-n)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left[[\left(\sigma_{a0}-\sigma_{a,M}\right)^{1-n}-C(1-n)(t-2\frac{\phi x}{U})]^{\frac{1}{1-n}}\right].
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Método Númerico - Método de Simpsons
+\end_layout
+
+\begin_layout Standard
+O Cálculo Númerico engloba um conjunto de métodos que são utilizados para
+ se obter a solução de problemas matemáticos de forma aproximada.
+ Esses métodos se aplicam para problemas em que não tem uma solução exata,
+ que não tem uma solução analítica, sendo necessário resolver por um método
+ númerico.
+ Um exemplo é a integral da equação (44) que não possui solução analítca.
+ 
+\end_layout
+
+\begin_layout Standard
+O método númerico selecionado foi o Método de Simpsons, que consiste na
+ aproximação das funções por arcos de parabóla, com o objetivo de encontrar
+ o valor aproximado da integral da função.
+ Esse método, diferente dos métodos anteriores como o do trapézio, precisa
+ de três pontos do intervalo e não apenas dos pontos dos extremos.
+\end_layout
+
+\begin_layout Standard
+Primeiro, considera - se os pontos igualmente espaçados entre si, e a origem
+ o ponto médio.
+ Assim, os pontos são 
+\begin_inset Formula $x_{0}=-h$
+\end_inset
+
+,
+\begin_inset Formula $x_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=h$
+\end_inset
+
+ e as respectivas imagens são 
+\begin_inset Formula $y_{0},$
+\end_inset
+
+
+\begin_inset Formula $y_{1},$
+\end_inset
+
+e 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+.
+ O polinômio interpolador é escrito como 
+\begin_inset Formula $p(x)=ax^{2}+bx+c$
+\end_inset
+
+, visto que é aproximado a arcos de parabóla, ou seja, uma função de segundo
+ grau.
+ 
+\end_layout
+
+\begin_layout Standard
+Segundo, integrando a função obtemos: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{x_{0}}^{x_{2}}p(x)dx=\intop_{-h}^{h}(ax^{2}+bx+c)dx=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[\frac{ax^{3}}{3}+\frac{bx^{2}}{2}+cx\right]_{x=-h}^{x=h}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{2ah^{3}}{3}+2ch^{2}=\frac{h}{3}(2ah^{2}+6c).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entretando, considerando que a parábola passe pelos pontos 
+\begin_inset Formula $\left(-h,y_{0}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,y_{1}\right)$
+\end_inset
+
+ e 
+\begin_inset Formula $\left(h,y_{2}\right),$
+\end_inset
+
+obtém-se:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{o}=a(-h)^{2}+b(-h)+c=ah^{2}-bh+c;
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{1}=a*0^{2}+b*0+c=c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{2}=ah^{2}+bh+c.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dessa forma, é obtida a equação 
+\begin_inset Formula $y_{0}+4y_{1}+y_{2}=2ah^{2}+6c,$
+\end_inset
+
+ assim é possível escrever a integral de 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\intop_{x_{0}}^{x_{2}}p(x)dx=\frac{h}{3}(2ah^{2}+6c)=\frac{h}{3}(y_{0}+4y_{1}+y_{2}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A proposição da regra de simspons enuncia que: 
+\end_layout
+
+\begin_layout Standard
+Se f (x) é uma função contínua, e os pontos 
+\begin_inset Formula $(x_{0}$
+\end_inset
+
+,
+\begin_inset Formula $y_{0})$
+\end_inset
+
+ , 
+\begin_inset Formula $(x_{1}$
+\end_inset
+
+,
+\begin_inset Formula $y_{1})$
+\end_inset
+
+ e 
+\begin_inset Formula $(x_{2}$
+\end_inset
+
+,
+\begin_inset Formula $y_{2})$
+\end_inset
+
+ do gráfico de f (x ) estão igualmente espaçados horizontalmente, ou seja,
+ se 
+\begin_inset Formula $x_{2}-x_{1}=x_{1}-x_{0}=h$
+\end_inset
+
+, então podemos aproximar: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\intop_{x_{0}}^{x_{2}}f(x)dx\cong\frac{h}{3}(y_{0}+4y+y_{2})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Identificação de pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+Pacote é um conjunto de classes que se relacionam por meio de conceitos,
+ assuntos em comum, ou seja, que fazem parte de uma mesma área.
+\end_layout
+
+\begin_layout Itemize
+Pacote Dados: Pacote de dados onde são obtidos os parâmetros do programa
+ via arquivo txt, e que foram obtidos através da literatura, ou através
+ de experimentos laboratoriais.
+\end_layout
+
+\begin_layout Itemize
+Pacote MétodoNumerico: Pacote onde apresenta o método númerico para cálculo
+ das integrais que não tem solução analítica, apenas númerica.
+ 
+\end_layout
+
+\begin_layout Itemize
+Pacote Simulação:Composto de diversas equações para realização do cálculo
+ da concentração retida nas paredes dos poros por adesão, da concentração
+ retida por exclusão por tamanhao/pontes e do cálculo da zona de formação
+ de pontes para determinar, do tempo que inicia a formação de pontes 
+\begin_inset Formula $(t_{b})$
+\end_inset
+
+.
+ Nesse pacote é criada a malha do espaço e do tempo, é salvo os resultados
+ obtidos dos cálculos.
+ 
+\end_layout
+
+\begin_layout Itemize
+Pacote Resultados: Pacote onde contém os métodos para gerar os gráficos
+ e para criar o grid dos resultados e salvar nos arquivos.
+ 
+\end_layout
+
+\begin_layout Section
+Diagrama de pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+Através do diagrama de pacotes é possível observar as dependências entre
+ as diferentes partes do sistemas.
+ Pode ser composto por sistemas, subsistemas, hierarquias de classes, classes,
+ interfaces, componentes, nós, colaborações e casos de uso.
+\end_layout
+
+\begin_layout Standard
+No presente projeto, o diagrama de pacotes é composto por três pacotes,
+ o pacote de dados, de método númerico e de simulação.
+ 
+\end_layout
+
+\begin_layout Standard
+coloque aqui texto falando do diagrama de pacotes, referencie a figura.
+ Veja Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagramas/PackageDiagram.PNG
+	width 15cm
+	height 10cm
+	scaleBeforeRotation
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Pacotes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes-1"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,928 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement ph
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Especificação}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Especificação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Concepção
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+especificação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nesse capítulo será abordado as especificações do programa a ser modelado
+ e desenvolvido para o projeto de engenharia de softwatre.
+ Será definido as carcterísticas gerais do programa para que ele seja realizado.A
+s necessidades que devem ser obedecidas e quais os serviços ofereciso e
+ restrições do software.
+\end_layout
+
+\begin_layout Section
+Nome do sistema/produto 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="8cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nome
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simular o declínio de produtividade devido a migração de finos no reservatório,
+ através do cálculo da quantidade de párticulas depositadas.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Componentes principais
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sistema de equações, e de equações integrais númericas para cálculo dos
+ perfis de párticulas depositadas dados os tempos dos perfis e as posições
+ espaciais para amostragem.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Missão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Determinar a quantidade de partículas retidas por exclusão por tamanhao
+ , afim de simular o declínio da produtividade dos poços, devido o declínio
+ da permeabilidade causada pelas partículas retidas no meio poroso.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Especificação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+especificação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se a seguir a especificação do software.
+\end_layout
+
+\begin_layout Itemize
+O software que será desenvolvido, tem por objetivo simular a migração de
+ nos ocasionada pela injeção de água de baixa salinidade afimm de determinar
+ o declínio de produtividade do poço.
+ Esse programa irá determinar a quantidade de partículas depositadas/retidas,
+ que são as responsáveis pela diminuição da permeabilidade.
+ Essa análise é feita atráves do cálculo da Impendância/queda de pressão.
+ 
+\end_layout
+
+\begin_layout Itemize
+A modelagem matemática do problema foi desenvolvida através das equações
+ de balanço de massa de partículas, do balanço de massa de íons, da cinética
+ de captura, da cinética de liberação e da lei de Darcy.
+ A solução semi-analítica do problema será implementada no programa.
+ As variáveis porosidade, velocidade, coeciente de filtração por exclusão
+ pelo tamanho, coeficiente de filtração por formação de pontes e coeciente
+ de dano à formação são conhecidas pelo usuário de acordo com os dados obtidos
+ através de testes laboratoriais e através de dados da literatura, sendo
+ de escolha do usuário qual valores de referência utilizar.
+ A condição de contorno e a condição inicial também são conhecidas, e serão
+ inseridas pelo usuário.
+ Enquanto que a entrada dos valores das variáveis do fluido e da rocha/partícula
+ para execução do software serão por meio da entrada de dados em um arquivo
+ txt.
+ 
+\end_layout
+
+\begin_layout Itemize
+O tempo será calculado por meio dos dados inseridos.
+ Será implementado uma estrutura de seleção tendo como condição o tempo
+ e n, para determinar qual método será executado para cálculo das concentrações
+ .
+ Determinado o métódo, os valores dos parâmetros será recebido e o software
+ irá realizar o cálculo da concentração de partículas retidas por adesão
+ e a concentração suspensa.
+ Será implementado um método numérico para determinar a solução de integrais
+ numéricas, e assim determinar a concentração de partículas retidas por
+ exclusão por tamanho/formação de pontes.
+ E assim, determinar os perfis de partículas depositadas de acordo com o
+ tempo e a posição espacial.
+\end_layout
+
+\begin_layout Itemize
+O presente código apresentará licença de software livre.
+ O software apresentara interface em modo texto, visando simplicar a entrada
+ e a saída de dados.
+ O programa será realizado através da linguagem de programação orientada
+ a objeto C++.
+ 
+\end_layout
+
+\begin_layout Subsection
+Requisitos funcionais
+\end_layout
+
+\begin_layout Standard
+Apresenta-se a seguir os requisitos funcionais
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+coloque aqueles que fazem sentido para seu sistema
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="block" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-01
+\end_layout
+
+\end_inset
+</cell>
+<cell mroffset="2cm" alignment="block" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário deverá ter liberdade para selecionar com quais dados (experimentais
+ ou da literatura) , e qual material (tipo de rocha) deseja trabalhar.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário terá disponível os resultados obtidos em um arquivo de texto e
+ gráfico.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário poderá plotar seus resultados em um gráfico.
+ O gráfico poderá ser salvo como imagem ou ter seus dados exportados como
+ texto.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-07
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nos casos em que o software for plotar gráficos o software externo 
+\family typewriter
+gnuplot
+\family default
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.gnuplot.org"
+literal "false"
+
+\end_inset
+
+ deverá estar instalado no sistema.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Requisitos não funcionais
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RNF-01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Os programa deverá ser multi-plataforma, podendo ser executado em 
+\emph on
+Windows
+\emph default
+, 
+\emph on
+GNU/Linux
+\emph default
+ ou 
+\emph on
+Mac
+\emph default
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Casos de uso
+\end_layout
+
+\begin_layout Standard
+O caso de uso, descreve os cenários de uso do software, como ocorre a interação
+ do usuário com as mesmas.
+ Além disso, por meio do caso de uso é representado a sequência das tarefas
+ que devem ser executadas, que são as etapas.
+ E também, os cenários alternativos, que é representado pelas exceções,
+ caso onde o usuário insere um dado errado, ou comete um erro.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Caso de uso
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Exemplo-de-um-caso-de-uso (tabela)"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nome do caso de uso:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cálculo da quantidade de partículas retidas no meio poroso.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resumo/descrição:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cálculo da quantidade de partículas , por meio da solução semi-analítica
+ do problema e de parâmetros determinados experimentalmente ou de valores
+ da literatura..
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Etapas: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+\begin_inset Formula $\,$
+\end_inset
+
+Entrada/Leitura dos dados do fluído (velocidade e viscosidade).
+\end_layout
+
+\begin_layout Plain Layout
+2.
+\begin_inset Formula $\,$
+\end_inset
+
+Entrada/Leitura dados do reservatório (porosidade), do coeciente de filltração
+ por exclusão pelo tamanho, da formação de pontes e do dano à formação.
+\end_layout
+
+\begin_layout Plain Layout
+3.
+\begin_inset Formula $\,$
+\end_inset
+
+Entrada/Leitura constantes da equação constantes C e n.
+\end_layout
+
+\begin_layout Plain Layout
+4.
+\begin_inset Formula $\,$
+\end_inset
+
+Definir o tempo e criação de uma malha(grid) onde será armazenada os valores
+ das concentraçãoes de acordo com o tempo e espaço.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+5.
+\begin_inset Formula $\,$
+\end_inset
+
+Analisar se o parâmetro tempo obedece a condição.
+\end_layout
+
+\begin_layout Plain Layout
+6.
+\begin_inset Formula $\,$
+\end_inset
+
+Determinar qual cálculo/equação realizar de acordo com os valores do tempo
+ e do n.
+\end_layout
+
+\begin_layout Plain Layout
+7.
+\begin_inset Formula $\,$
+\end_inset
+
+Cálculo da concentração de partículas retidas e concentração de partículas
+ suspensas.
+\end_layout
+
+\begin_layout Plain Layout
+8.
+\begin_inset Formula $\,$
+\end_inset
+
+Cálculo da integral numérica de concentração de partículas por exclusão
+ pelo tamanho/formação de pontes, através do método numérico de Simpson.
+\end_layout
+
+\begin_layout Plain Layout
+9.
+\begin_inset Formula $\,$
+\end_inset
+
+Determinar os perfis de partículas depositadas de acordo com os tempos dos
+ perfis e as posições espaciais.
+\end_layout
+
+\begin_layout Plain Layout
+10.
+\begin_inset Formula $\,$
+\end_inset
+
+Calcular a Impendância/queda de pressão para estimar a redução da permeabilidiad
+e.
+\end_layout
+
+\begin_layout Plain Layout
+11.
+\begin_inset Formula $\,$
+\end_inset
+
+Exportar resultados para disco
+\end_layout
+
+\begin_layout Plain Layout
+11.
+\begin_inset Formula $\,$
+\end_inset
+
+Gerar gráfico com os resultados obtidos.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cenários alternativos:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entrada errada de dados pelo usuário, como entrada de dados negativos quando
+ são aceitos apenas valores positivos.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+As Figuras devem ficar GRANDES; bem legíveis!! se necessário dar zoom!!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diagrama de caso de uso geral
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+ do software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de caso representa visualmente o caso de uso.
+ Ele é utilizado para demonstrar as etapas do sistema pelo usário, para
+ que tenham uma visão geral do sistema.
+ Pode ser utilizado antes e após a etapa de especicação.
+ Assim, os diagramas mostram as interações do usuário com o programa.
+ 
+\end_layout
+
+\begin_layout Subsection
+Diagrama de caso de uso específico
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ do software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No diagrama de caso de uso específico, o usuário com o sistema do programa.
+ Mostrando a entrada de dados e a obtenção dos resultados obtidos que serão
+ armazenados em arquivos .txt na pasta 
+\begin_inset Quotes eld
+\end_inset
+
+resultados malha
+\begin_inset Quotes erd
+\end_inset
+
+.
+ E por fim, gerará gráficos com os resultados obtidos utilizando um sistema
+ externo, o software gnuplot.
+ Este diagrama de caso de uso ilustra as etapas a serem executadas pelo
+ usuário ou sistema, a iteração do usuário com o sistema.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Diagramas/DiagramasFinal/use case diagram.png
+	width 70text%
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de caso de uso específico – Título
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
