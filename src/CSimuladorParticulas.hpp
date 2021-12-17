@@ -1,12 +1,12 @@
 #ifndef CSIMULADORPARTICULAS_HPP
 #define CSIMULADORPARTICULAS_HPP
 
-#include "CGrid.cpp"
-#include "CRocha.cpp"
+#include "CGrid.hpp"
+#include "CRocha.hpp"
 #include "funcao.hpp"
-#include "CGnuplot.cpp"
-#include "metodosimpson.cpp"
-#include "CParticulaFluido.cpp"
+#include "CGnuplot.hpp"
+#include "metodosimpson.hpp"
+#include "CParticulaFluido.hpp"
 
 #include<vector>
 #include<string>

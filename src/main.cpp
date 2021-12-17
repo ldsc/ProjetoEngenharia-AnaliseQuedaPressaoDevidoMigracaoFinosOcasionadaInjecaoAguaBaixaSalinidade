@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 
-#include "CSimuladorParticulas.cpp"
+#include "CSimuladorParticulas.hpp"
 
 using namespace std;
 

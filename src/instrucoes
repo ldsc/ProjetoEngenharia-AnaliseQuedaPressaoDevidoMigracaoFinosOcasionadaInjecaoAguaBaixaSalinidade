@@ -1,0 +1,3 @@
+Para compilar:
+g++ *.cpp
+
