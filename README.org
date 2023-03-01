@@ -1,0 +1,64 @@
+
+* Nome do Software (ou Biblioteca):
+- ANÁLISE DA QUEDA DE PRESSÃO DEVIDO A MIGRAÇÃO DE FINOS OCASIONADA PELA INJEÇÃO DE ÁGUA DE BAIXA SALINIDADE
+
+* Resumo e/ou informação extra: 
+- Desenvolver um projeto de Engenharia de Software que calcule a quantidade
+de partículas depositadas no meio poroso devido a migração de finos, utili-
+zando como dados/informações de referência os valores da literatura ou de
+experimentos laboratoriais, os quais serão inseridos pelo usuário por meio de
+arquivos .txt. Por meio do software será possível analisar o declínio de perme-
+abilidade, ou seja o dano à formação, devido a quantidade de partículas retidas
+no meio poroso e assim evitar prejuízos ecônomicos as indústrias petróliferas,
+pois será possível realizar uma análise e um estudo prévio do caso.
+
+* Versão: 
+- 1.0.
+
+* Data:
+- 2021/2 - segundo semestre.
+  
+* Autor de Contato:
+- André Duarte Bueno <andreduartebueno@gmail.com>
+
+* Lista dos Autores:
+- Sayori Uto Borges
+- André Duarte Bueno <andreduartebueno@gmail.com>
+
+* Áreas de pesquisa vinculadas: 
+- Modelagem Matemática Computacional
+- Engenharia de Reservatório
+- Dano a formação  
+
+* Vinculo com: 
+- Trabalho da disciplina de programação prática.
+
+* Paradigmas: 
+- POO - Programação Orientada a Objeto (códigos em C++)
+
+* Tipo de Interface: 
+- Terminal e gráfica (gnuplot).
+
+* Plataformas Suportadas: 
+- Windows e GNU/Linux e Mac OS X (não testada).
+
+* Linguagens Utilizadas: 
+- C++ 11.
+
+* Bibliotecas Utilizadas (dependências):
+- CGnuplot - https://github.com/ldsc/CGnuplot
+
+* Softwares utilizados (dependências)
+- gnuplot http://www.gnuplot.info/
+
+* Tipo de Licença:
+- GPL
+- Entre em contato com o Prof. André Duarte Bueno
+  andreduartebueno@gmail.com
+  para que o mesmo gere um novo projeto no github do ldsc para que você (e sua equipe) possam trabalhar na nova versão.
+- Se este projeto tem como número de versão 1.0 a nova versão deverá ser 2.0 e assim sucessivamente.
+- Os nomes dos autores originais deve ser preservada na nova versão, ou seja, adicione a informação do número da versão, os nomes dos membros da nova equipe, mas jamais apague os nomes dos autores originais (isto seria plágio).
+- Na descrição do projeto informe que trata-se de uma nova versão, que tem como base a versão anterior e DESTAQUE COM CLAREZA E OBJETIVIDADE QUAIS AS NOVIDADES DA NOVA VERSÃO.
+  
+* Links:
+
